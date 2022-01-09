@@ -7,7 +7,14 @@ Run Terraform apply to Bootstrap Fluxcd V2 into the cluster.
 
 Flux v2 with Helm is responsible to get our application from GitOps WorkFlow to the cluster. 
 
-Manual Deployments 
+................................
+
+cd into this folder ..... Devops-challenge/application-infra/Devops_Challenge/devops_work.yaml
+
+run kubectl apply -f secret.yaml  
+This will create the secret for the rest of the application to use. 
+
+.......................................
 
 kind: ServiceAccount
 apiVersion: v1
