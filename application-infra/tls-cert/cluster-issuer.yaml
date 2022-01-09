@@ -1,7 +1,0 @@
-apiVersion: awspca.cert-manager.io/v1beta1
-kind: AWSPCAClusterIssuer
-metadata:
-  name: demo-test-root-ca
-spec:
-  arn: arn:aws:acm-pca:eu-west-2:373040707757:certificate-authority/de0d4221-3451-4941-930b-f596a050c994
-  region: eu-west-2
