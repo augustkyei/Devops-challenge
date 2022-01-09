@@ -1,0 +1,23 @@
+kind: Certificate
+apiVersion: cert-manager.io/v1
+metadata:
+  name: senapt-cert
+spec:
+  commonName: "*.default.senapt.cloud"
+  dnsNames:
+    - "audit-trail-service.default.senapt.cloud"
+    - "user-management-service.default.senapt.cloud"
+    - "*.default.senapt.cloud"
+  duration: 86400h0m0s
+  issuerRef:
+    group: awspca.cert-manager.io
+    kind: AWSPCAClusterIssuer
+    name: demo-test-root-ca
+  renewBefore: 360h0m0s
+  secretName: nlb-tls-app-secret
+  usages:
+    - server auth
+    - client auth
+  privateKey:
+    algorithm: "RSA"
+    size: 2048
